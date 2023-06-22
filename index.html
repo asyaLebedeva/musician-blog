@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Bright Lights</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+  </head>
+  <body>
+    <header class="header">
+        <picture class="header__logo">
+          <source srcset="img/logo-group.svg">
+          <img class="logo__img" src="img/logo-group.svg" alt="bright-logo">
+        </picture>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#info-section">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="#section-news">News</a></li>
+            <li class="nav__item"><a class="nav__link" href="#section-playlist">Music</a></li>
+            <li class="nav__item"><a class="nav__link" href="#media-fig">Media</a></li>
+            <li class="nav__item"><a class="nav__link" href="#tours">Tours</a></li>
+            <li class="nav__item"><a class="nav__link" href="#contacts">Contacts</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+      <section class="intro">
+        <div class="container">
+          <h2 class="intro__title">New Single</h2>
+            <h2 class="intro__audio">War For Love</h2>
+            <div class="player">
+              <audio class="player__audio" preload="metadata">
+                  <source src="/audio/1685013617264_track.ogg" type="audio/ogg">
+              </audio>
+                <div class="control">
+                  <div class="control__play control__pause control__play-pause"></div>
+                  <input type="range" class="control__timeline" max="100" value="0">
+                  <span class="control__current-time time">0:00</span>
+                  <span class="control__dash">-</span>
+                  <span class="control__duration-time time">0:00</span>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section id="section-news" class="news">
+        <div class="container">
+          <ul class="news__list">
+            <li class="news__item">
+              <div class="news__one news__box">
+                  <h3 class="news__descr">Working on&nbsp;my&nbsp;upcoming full-lenth
+                album that`s releasing later this year.</h3>
+              </div>
+            </li>
+
+            <li class="news__item">
+              <div class="news__two news__box">
+                <h3 class="news__descr">
+                  Halloween vibes. Listen my&nbsp;new track!
+                </h3>
+              </div>
+            </li>
+
+            <li class="news__item">
+              <div class="news__three news__box">
+                <h3 class="news__descr">WarForLove is&nbsp;OUT NOW!! Stream it&nbsp;here!</h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="info-section" class="info-page">
+        <div class="container">
+          <div class="info">
+            <h1 class="info__title">Bright Lights</h1>
+            <p class="info__descr">Bright Lights is&nbsp;a&nbsp;multi-Grammy nominated singer, songwriter, DJ&nbsp;and record producer. She has written for numerous</p>
+            <p class="info__descr">pop stars including Britney Spears, Justin Bieber, Usher and Beyonc&eacute;. Her catalog has amassed over 1&nbsp;billion streams worldwide. More than 100 million of&nbsp;those streams can be&nbsp;attributed to&nbsp;her artist career and include such hits as&nbsp;Porter Robinson&rsquo;s &laquo;Language,&raquo; 3LAU&rsquo;s &laquo;How You Love&nbsp;Me&raquo; and her own single &laquo;Runaway.&raquo; She was also a&nbsp;featured vocalist on&nbsp;Zedd&rsquo;s #1 Clarity album. Her latest music video, &laquo;Put It&nbsp;Down,&raquo; reached 1&nbsp;million streams in&nbsp;the first week, releasing independently. Bright Lights is&nbsp;currently in&nbsp;the studio working on&nbsp;a&nbsp;self-produced album slated for release in&nbsp;2020.</p>
+
+            <ul class="info__list">
+              <li class="info__item">Based in: Los Angeles</li>
+              <li class="info__item">Founded in 2011</li>
+              <li class="info__item">Genre: #DancePop </li>
+              <li class="info__item">Label: 333 Recordings</li>
+            </ul>
+          </div>
+
+          <figure id="media-fig" class="media">
+            <blockquote class="media__cite" cite="#cite">
+              <p class="media__descr">&laquo;In&nbsp;an&nbsp;age where mainstream music is&nbsp;designed to&nbsp;be&nbsp;as
+              easily consumed as&nbsp;possible, listening to&nbsp;Bright Lights is
+              refreshing, to&nbsp;say the least. Her sound is&nbsp;perfect for radio
+              but complex enough to&nbsp;separate her from other pop newcomers.&raquo;</p>
+            </blockquote>
+            <figcaption class="media__cap"><a class="media__link" href="http://populove.net/" target="_blank">PopULove.net</a></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="section-playlist" class="last-track">
+        <div class="container">
+          <picture class="last-track__pic">
+            <source srcset="img/play-list-label.png">
+            <img class="last-track__img" src="img/play-list-label.png" alt="bright-lights-photo">
+          </picture>
+          <div class="last-track__playlist">
+            <h2 class="last-track__title">Last tracks</h2>
+            <div class="last-track__player">
+              <div class="last-track__header">
+                <div class="last-track__control">
+                  <div class="last-track__play last-track__pause last-track__play-pause play"></div>
+                  <input type="range" class="last-track__input" max="100" value="0">
+                  <span class="last-track__current timer">0:00</span>
+                  <span class="last-track__dash">-</span>
+                  <span class="last-track__duration timer">0:00</span>
+                </div>
+              </div>
+            </div>
+            <ol class="playlist">
+              <li class="playlist__item">
+                <p class="playlist__title">3LAU, Bright Lights — How You Love Me</p>
+                <audio class="playlist__song" preload="metadata">
+                  <source src="audio/1685016903150_track.ogg" type="audio/ogg">
+                </audio>
+              </li>
+
+              <li class="playlist__item">
+                <p class="playlist__title">Bright Lights, Kaleena Zanders, Kandy — War For Love</p>
+                <audio class="playlist__song" preload="metadata">
+                  <source src="audio/1685013617264_track.ogg" type="audio/ogg">
+                </audio>
+              </li>
+
+              <li class="playlist__item">
+                <p class="playlist__title">Pink Is Punk, Benny Benassi, Bright Lights — Ghost</p>
+                <audio class="playlist__song" preload="metadata">
+                  <source src="audio/1685017119268_track.ogg" type="audio/ogg">
+                </audio>
+              </li>
+
+              <li class="playlist__item">
+                <p class="playlist__title">Hardwell, Dyro, Bright Lights — Never Say Goodbye</p>
+                <audio class="playlist__song" preload="metadata">
+                  <source src="audio/1685015143932_track.ogg" type="audio/ogg">
+                </audio>
+              </li>
+
+              <li class="playlist__item">
+                <p class="playlist__title">Zeds Dead, Dirtyphonics, Bright Lights — Where Are You Now</p>
+                <audio class="playlist__song" preload="metadata">
+                  <source src="audio/1685015234663_track.ogg" type="audio/ogg">
+                </audio>
+              </li>
+
+              <li class="playlist__item">
+                <p class="playlist__title">Zedd, Bright Lights — Follow You Down</p>
+                <audio class="playlist__song" preload="metadata">
+                  <source src="audio/1685016314392_track.ogg" type="audio/ogg">
+                </audio>
+              </li>
+            </ol>
+            <div class="follow">
+              <h2 class="follow__title">Follow me:</h2>
+              <ul class="follow__list">
+                <li class="follow__item"><a class="follow__link" href="https://open.spotify.come" target="_blank">Spotify</a></li>
+                <li class="follow__item"><a class="follow__link" href="https://music.apple.com" target="_blank">iTunes</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tours" class="section-gallery">
+        <div class="container">
+          <ul class="section-gallery__list">
+            <li class="section-gallery__item section-gallery__item_one"><img class="section-gallery__img" src="img/tour-one.png" alt="photo"></li>
+            <li class="section-gallery__item section-gallery__item_two"><img class="section-gallery__img" src="img/tour-two.png" alt="photo"></li>
+            <li class="section-gallery__item section-gallery__item_three"><img class="section-gallery__img" src="img/tour-three.png" alt="photo"></li>
+            <li class="section-gallery__item section-gallery__item_four"><img class="section-gallery__img" src="img/tour-four.png" alt="photo"></li>
+            <li class="section-gallery__item section-gallery__item_five"><h2><a class="section-gallery__link" href="#" target="_blank">EDC Las Vegas Mainstage</a></h2></li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="slider">
+        <div class="container slider__carousel">
+          <div class="slider__item active">
+            <div class="slider__card">
+              <div class="slider__pic">
+                <img class="slider__img" src="img/tour-pic-own.png" alt="chandler-az">
+              </div>
+              <div class="slider__content">
+                <h4 class="slider__title">Chandler, AZ</h4>
+                <p class="slider__sub">The Park at Wild Horse Pass</p>
+                <time datetime="2021-04-02" class="slider__time">Apr 02 2021</time>
+                <a class="slider__link" href="#" target="_blank">Tickets</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <div class="slider__card">
+              <div class="slider__pic">
+                <img class="slider__img" src="img/tour-pic-three.png" alt="el-swing-ibz">
+              </div>
+              <div class="slider__content">
+                <h4 class="slider__title">Ibiza, IBZ</h4>
+                <p class="slider__sub">Swag Ibiza Club</p>
+                <time datetime="2021-08-07" class="slider__time">Jul 08 2021</time>
+                <a class="slider__link" href="#" target="_blank">Tickets</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <div class="slider__card">
+              <div class="slider__pic">
+                <img class="slider__img" src="img/tour-pic-two.png" alt="ibiza-ibz">
+              </div>
+              <div class="slider__content">
+                <h4 class="slider__title">Ibiza, IBZ</h4>
+                <p class="slider__sub">El Swing Ibiza</p>
+                <time datetime="2021-07-10" class="slider__time">Jul 10 2021</time>
+                <a class="slider__link" href="#" target="_blank">Tickets</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <div class="slider__card">
+              <div class="slider__pic">
+                <img class="slider__img" src="img/tour-pic-own.png" alt="chandler-az">
+              </div>
+              <div class="slider__content">
+                <h4 class="slider__title">Chandler, AZ</h4>
+                <p class="slider__sub">The Park at Wild Horse Pass</p>
+                <time datetime="2021-04-02" class="slider__time">Apr 02 2021</time>
+                <a class="slider__link" href="#" target="_blank">Tickets</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <div class="slider__card">
+              <div class="slider__pic">
+                <img class="slider__img" src="img/tour-pic-three.png" alt="el-swing-ibz">
+              </div>
+              <div class="slider__content">
+                <h4 class="slider__title">Ibiza, IBZ</h4>
+                <p class="slider__sub">Swag Ibiza Club</p>
+                <time datetime="2021-08-07" class="slider__time">Jul 08 2021</time>
+                <a class="slider__link" href="#" target="_blank">Tickets</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <div class="slider__card">
+              <div class="slider__pic">
+                  <img class="slider__img" src="img/tour-pic-two.png" alt="ibiza-ibz">
+                </div>
+                <div class="slider__content">
+                  <h4 class="slider__title">Ibiza, IBZ</h4>
+                  <p class="slider__sub">El Swing Ibiza</p>
+                  <time datetime="2021-07-10" class="slider__time">Jul 10 2021</time>
+                  <a class="slider__link" href="#" target="_blank">Tickets</a>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacts">
+      <div class="footer">
+        <picture class="footer__logo">
+          <source srcset="img/logo-group.svg">
+          <img class="footer__img" src="img/logo-group.svg" alt="bright-logo">
+        </picture>
+        <div class="footer-table">
+          <table class="footer-table__contacts">
+            <tr class="footer-table__column-one">
+              <th class="footer-table__contacts">Artist Management:</th>
+              <td class="footer-table__address">Jake Henny</td>
+            </tr>
+
+            <tr class="footer-table__column">
+              <th class="footer-table__contacts">Email:</th>
+              <td class="footer-table__address"><a class="email" href="mailto:jake@brightlightsoficcial.com">jake@brightlightsoficcial.com</a></td>
+            </tr>
+          </table>
+        </div>
+        <ul class="footer__list">
+          <li class="footer__item"><a class="footer__link" href="https://music.apple.com" target="_blank"></a></li>
+          <li class="footer__item"><a class="footer__link" href="https://open.spotify.com" target="_blank"></a></li>
+          <li class="footer__item"><a class="footer__link" href="https://www.instagram.com" target="_blank"></a></li>
+          <li class="footer__item"><a class="footer__link" href="https://www.youtube.com" target="_blank"></a></li>
+          <li class="footer__item"><a class="footer__link" href="https://twitter.com" target="_blank"></a></li>
+          <li class="footer__item"><a class="footer__link" href="https://www.facebook.com" target="_blank"></a></li>
+        </ul>
+   
+        <!-- for media-->
+        <div class="media-screen">
+          <ul class="media-screen__list">
+            <li class="media-screen__item">Artist Management:</li>
+            <li class="media-screen__item">Jake Henny</li>
+            <li class="media-screen__item">Email:</li>
+            <li class="media-screen__item">
+              <a class="media-screen__email" href="mailto:jake@brightlightsoficcial.com">jake@brightlightsoficcial.com</a>
+            </li>
+          </ul>
+        </div>
+        <!-- for media-->
+        <p class="footer__copyright">&#169; 2020 DJ bright lights.</p>
+      </div>
+    </footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+      const calculateTime = (secs) => {
+        const minutes = Math.floor(secs / 60);
+        const seconds = Math.floor(secs % 60);
+        const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+        return `${minutes}:${returnedSeconds}`;
+      }
+    </script>
+  </body>
+</html>
+<!--https://www.figma.com/file/KiUNzxGXlW8vwHH0fMR5ls/Templates-%2320.-More-on-Figma.info?node-id=1%3A4&t=palqFTFaowHa91Wv-0-->
