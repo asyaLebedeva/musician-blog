@@ -6,4 +6,5 @@ Features:
 - Functionality Player + Playlist (scroll down);
 - Behavior of slider from layout for desktop and media;
 - Adaptive;
-- Audio playback/pause.
+- Audio playback/pause;
+- Audio sources: soundcloud.com.
