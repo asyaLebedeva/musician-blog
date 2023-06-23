@@ -7,4 +7,4 @@ Features:
 - Behavior of slider from layout for desktop and media;
 - Adaptive;
 - Audio playback/pause;
-- Audio sources: soundcloud.com.
+- Audio sources: [Soundcloud](https://soundcloud.com/)
