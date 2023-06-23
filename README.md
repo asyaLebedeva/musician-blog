@@ -5,3 +5,5 @@ Layout from [Figma]( https://www.figma.com/file/KiUNzxGXlW8vwHH0fMR5ls/Templates
 Features:
 - Functionality Player + Playlist (scroll down);
 - Behavior of slider from layout for desktop and media;
+- Adaptive;
+- Audio playback/pause.
