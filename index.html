@@ -37,7 +37,7 @@
             <h2 class="intro__audio">War For Love</h2>
             <div class="player">
               <audio class="player__audio" preload="metadata">
-                  <source src="/audio/1685013617264_track.ogg" type="audio/ogg">
+                  <source src="/audio/Bright Lights - War For Love.mp3" type="audio/mpeg">
               </audio>
                 <div class="control">
                   <div class="control__play control__pause control__play-pause"></div>
@@ -324,16 +324,8 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/index.js"></script>
-    <script>
-      const calculateTime = (secs) => {
-        const minutes = Math.floor(secs / 60);
-        const seconds = Math.floor(secs % 60);
-        const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
-        return `${minutes}:${returnedSeconds}`;
-      }
-    </script>
+    <script src="js/script.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>
 <!--https://www.figma.com/file/KiUNzxGXlW8vwHH0fMR5ls/Templates-%2320.-More-on-Figma.info?node-id=1%3A4&t=palqFTFaowHa91Wv-0-->
