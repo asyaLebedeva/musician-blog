@@ -1,11 +1,8 @@
-const body = document.body;
 const player = document.querySelector(".last-track__playlist");
-const playerHeader = player.querySelector(".last-track__header");
 const playerControls = player.querySelector(".last-track__control");
 const playerPlayList = player.querySelectorAll(".playlist__item");
 const playerSongs = player.querySelectorAll(".playlist__song");
 const playButton = player.querySelector(".last-track__play");
-const playlistButton = player.querySelector(".playlist");
 
 const nextPrev = playerPlayList.length - 1;
 let count = 0;
@@ -13,9 +10,9 @@ let song = playerSongs[count];
 let isPlay = false;
 
 const progresFilled = playerControls.querySelector(".last-track__input");
-let isMove = false;
 
 // play-pause/select-track
+import { calculateTime } from "./main.js";
 
 function next(index) {
   count = index || count;
