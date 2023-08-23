@@ -648,6 +648,7 @@ ol {
   line-height: 27px;
   color: var(--light);
   text-decoration: none;
+  cursor: pointer;
   -webkit-transition: color .3s ease-in-out;
   -o-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
@@ -680,6 +681,7 @@ ol {
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
+  cursor: pointer;
 }
 
 .follow__list {
@@ -987,6 +989,7 @@ ol {
   margin-bottom: 60px;
   max-width: 540px;
   border-spacing: 30px 1px;
+  cursor: default;
 }
 
 .media-screen {
@@ -1070,6 +1073,7 @@ ol {
   line-height: 19px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
+  cursor: default;
 }
 
 @media (max-width: 1536px) {
