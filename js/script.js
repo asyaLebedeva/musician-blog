@@ -1,18 +1,16 @@
-const player = document.querySelector(".last-track__playlist");
-const playerControls = player.querySelector(".last-track__control");
-const playerPlayList = player.querySelectorAll(".playlist__item");
-const playerSongs = player.querySelectorAll(".playlist__song");
-const playButton = player.querySelector(".last-track__play");
-
+const promotedPlayer = document.querySelector(".player__container");
+const playerControls = promotedPlayer.querySelector(".player__control");
+const playerPlayList = promotedPlayer.querySelectorAll(".playlist__item");
+const playerSongs = promotedPlayer.querySelectorAll(".playlist__song");
+const playButton = promotedPlayer.querySelector(".player__play");
 const nextPrev = playerPlayList.length - 1;
 let count = 0;
-let song = playerSongs[count];
+let audio = playerSongs[count];
 let isPlay = false;
-
-const progresFilled = playerControls.querySelector(".last-track__input");
+let isMove = false;
+const timeline = playerControls.querySelector(".player__timeline");
 
 // play-pause/select-track
-import { calculateTime } from "./main.js";
 
 function next(index) {
   count = index || count;
@@ -35,12 +33,12 @@ function back(index) {
   }
 
 function selectSong() {
-  song = playerSongs[count];
+  audio = playerSongs[count];
   for (const item of playerSongs) {
-    if (item != song) {
+    if (item != audio) {
     item.pause();
     }
-  } if (isPlay) song.play();
+  } if (isPlay) audio.play();
 }
 
 function run() {
@@ -48,72 +46,47 @@ function run() {
 }
 
 function playSong() {
-  if (song.paused) {
-      song.play();
-      playButton.className = "last-track__play";
+  if (audio.paused) {
+      audio.play();
+      playButton.className = "player__play";
   } else { 
-      song.pause();
-      playButton.className = "last-track__pause";
+      audio.pause();
+      playButton.className = "player__pause";
   }
 }
 
 // timeline
+import { calculateTime, changeTimelinePosition, changeSeek, displayBufferedAmount, whilePlaying } from "./main.js";
 
-function progressPosition () {
-  const percentagePosition = (100*song.currentTime) / song.duration;
-  progresFilled.style.backgroundSize = `${percentagePosition}% 100%`;
-  progresFilled.value = percentagePosition;
-}
-
-const durationSongTime = playerControls.querySelector(".last-track__duration");
-const currentSongTime = playerControls.querySelector(".last-track__current");
+const durationCont = playerControls.querySelector(".player__duration");
+const currentCont = playerControls.querySelector(".player__current");
 
 function timer() {
-  let min = parseInt(song.duration / 60);
+  let min = parseInt(audio.duration / 60);
   if (min < 10) min = "0" + min;
-  let sec = parseInt(song.duration % 60);
+  let sec = parseInt(audio.duration % 60);
   if (sec < 10) sec = "0" + sec;
   return `${min}:${sec}`;
 };
 
 function showDuration() {
   setInterval(() => {
-  const songTime = song.duration 
-  durationSongTime.textContent = timer(songTime);
+  const songTime = audio.duration 
+  durationCont.textContent = timer(songTime);
   }, 100);
 }
 
-const buffer = () => {
-  const bufferedAmount = song.buffered.length - 1;
-  playerControls.style.setProperty("--buffered-width", `${(bufferedAmount / progresFilled.max) * 100}%`);
+timeline.addEventListener("change", changeSeek);
+
+if (audio.readyState > 0) {
+  showDuration();
+  displayBufferedAmount();
+} else {
+  audio.addEventListener("loadedmetadata", () => {
+      showDuration();
+      displayBufferedAmount();
+  });
 }
-
-progresFilled.addEventListener("change", () => {
-  song.currentTime = progresFilled.value;
-})
-
-function realTime() {
-  progresFilled.value = Math.floor(song.currentTime);
-  currentSongTime.textContent = calculateTime(progresFilled.value);
-  playerControls.style.setProperty("--seek-before-width", `${progresFilled.value / progresFilled.max * 100}%`);
-}
-
-progresFilled.addEventListener("change", realTime);
-
-let anima = requestAnimationFrame(realTime);
-progresFilled.addEventListener("input", () => {
-  currentSongTime.textContent = calculateTime(progresFilled.value);
-  if(!song.paused) {
-    cancelAnimationFrame(anima);
-  }
-});
-
-progresFilled.addEventListener("change", () => {
-  song.currentTime = progresFilled.value;
-  if(!song.paused) {
-    requestAnimationFrame(realTime);
-  }
-});
 
 // evts
 playButton.addEventListener("click", () => {
@@ -121,15 +94,28 @@ playButton.addEventListener("click", () => {
   playSong();
 });
 
-playerSongs.forEach(song => {
-  song.addEventListener("loadedmetadata", showDuration);
-  song.ontimeupdate = progressPosition;
-  song.addEventListener("progress", buffer);
+playerSongs.forEach(audio => {
+  audio.ontimeupdate = changeTimelinePosition;
+  audio.addEventListener("progress", displayBufferedAmount);
+})
+
+timeline.addEventListener("input", () => {
+  currentCont.textContent = calculateTime(timeline.value);
+  if(!audio.paused) {
+    cancelAnimationFrame(raf);
+}
+});
+
+timeline.addEventListener("change", () => {
+  audio.currentTime = timeline.value;
+  if(!audio.paused) {
+    requestAnimationFrame(whilePlaying);
+  }
 });
 
 document.addEventListener("pointerup", () => {
   isMove = false;
-  song.muted = false;
+  audio.muted = false;
 });
 
 playerPlayList.forEach((item, index) => {
@@ -145,7 +131,7 @@ playerPlayList.forEach((item, index) => {
   });
 });
 
-const titleSong = player.querySelectorAll(".playlist__title");
+const titleSong = promotedPlayer.querySelectorAll(".playlist__title");
 
 titleSong.forEach((el) => {
   el.addEventListener('click', function () {

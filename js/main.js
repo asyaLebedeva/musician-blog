@@ -1,6 +1,7 @@
 const promotedPlayer = document.querySelector(".player");
-const audio = promotedPlayer.querySelector(".player__audio");
-const timeline = promotedPlayer.querySelector(".control__timeline");
+const playerBtn = promotedPlayer.querySelector(".control__play")
+const audio = promotedPlayer.querySelector(".player__audio")
+const timeline = promotedPlayer.querySelector(".control__timeline")
 const controlBtn = promotedPlayer.querySelector(".control__play-pause");
 
 function playPause() {
@@ -18,6 +19,15 @@ controlBtn.addEventListener("click", playPause);
 audio.addEventListener("ended", function() {
   controlBtn.className = "control__play";
 });
+
+const calculateTime = (secs) => {
+  const minutes = Math.floor(secs / 60);
+  const seconds = Math.floor(secs % 60);
+  const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+  return `${minutes}:${returnedSeconds}`;
+}
+
+export { calculateTime, changeTimelinePosition, changeSeek, displayBufferedAmount, whilePlaying };
 
 function changeTimelinePosition () {
   const percentagePosition = (100*audio.currentTime) / audio.duration;
@@ -38,15 +48,6 @@ const controller = document.querySelector(".control");
 const durationCont= controller.querySelector(".control__duration-time");
 const currentCont = controller.querySelector(".control__current-time");
 let raf = null;
-
-const calculateTime = (secs) => {
-  const minutes = Math.floor(secs / 60);
-  const seconds = Math.floor(secs % 60);
-  const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
-  return `${minutes}:${returnedSeconds}`;
-}
-
-export { calculateTime };
 
 const displayDuration = () => {
     durationCont.textContent = calculateTime(audio.duration);
