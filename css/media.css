@@ -229,7 +229,7 @@
     margin-right: 10px;
   }
 
-  .control__timeline, .last-track__input {
+  .control__timeline, .player__timeline {
     margin-right: 30px;
   }
 }
@@ -239,7 +239,7 @@
     max-width: 768px;
   }
 
-  .control__timeline, .last-track__input {
+  .control__timeline, .player__timeline {
     margin-right: 15px;
   }
 
@@ -283,7 +283,7 @@
 }
 
 @media (max-width: 720px) {
-  .last-track__playlist {
+  .player__container {
     padding-left: 0;
   }
 
@@ -310,7 +310,7 @@
   }
 
   .last-track__play,
-  .last-track__pause {
+  .player__pause{
     margin-right: 5px;
   }
 
@@ -395,7 +395,7 @@
 
   .intro__title,
   .info__title,
-  .last-track__title {
+  .player__title {
     font-size: 30px;
     line-height: 100%;
   }
@@ -403,27 +403,27 @@
   .control__current-time, 
   .control__dash, 
   .control__duration-time, 
-  .last-track__current, 
-  .last-track__dash, 
-  .last-track__duration {
+  .player__current, 
+  .player__dash, 
+  .player__duration {
     font-weight: 400;
     font-size: 14px;
     line-height: 100%;
   }
 
   .control__timeline, 
-  .last-track__input {
+  .player__timeline {
     margin-right: 20px;
   }
 
   .control__timeline::-webkit-slider-thumb,
-  .last-track__input::-webkit-slider-thumb {
+  .player__timeline::-webkit-slider-thumb {
     width: 1px;
     height: 10px;
   }
 
   .control__timeline::-moz-range-thumb,
-  .last-track__input::-moz-range-thumb  {
+  .player__timeline::-moz-range-thumb  {
   width: 1px;
   height: 10px;
   }
@@ -434,14 +434,14 @@
   }
 
   .info__title,
-  .last-track__title {
+  .player__title {
     background-position: bottom 4px left;
   }
   
   .control__play,
   .last-track__play,
   .control__pause,
-  .last-track__pause {
+  .player__pause{
     margin-right: 15px;
     width: 45px;
     background-image: url("../img/media/480-pause-button.svg");
@@ -449,7 +449,7 @@
   }
 
   .control__pause,
-  .last-track__pause {
+  .player__pause{
     background-image: url("../img/media/play-button-480.svg");
   }
 
@@ -523,16 +523,16 @@
     padding: 15px 15px;
   }
 
-  .last-track__playlist {
+  .player__container {
     max-width: 100%;
   }
 
-  .last-track__control {
+  .player__control {
     max-width: 75%;
   }
 
   .last-track__play,
-  .last-track__pause {
+  .player__pause{
     margin-right: 15px;
   }
 
@@ -571,7 +571,7 @@
 }
 
 @media (max-width: 440px) {
-  .last-track__control {
+  .player__control {
     width: 55%;
   }
 

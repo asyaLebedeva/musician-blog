@@ -184,7 +184,7 @@ header {
 }
 
 .player,
-.last-track__player {
+.player__turn {
   --seek-before-width: 0%;
   --buffered-width: 0%;
   position: relative;
@@ -193,13 +193,13 @@ header {
   cursor: pointer;
 }
 
-.last-track__player {
+.player__turn {
   margin-bottom: 50px;
   width: 540px;
 }
 
 .control,
-.last-track__control {
+.player__control {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,9 +215,9 @@ header {
 }
 
 .control__play,
-.last-track__play,
+.player__play,
 .control__pause,
-.last-track__pause {
+.player__pause {
   margin-right: 45px;
   width: 35px;
   height: 25px;
@@ -227,11 +227,11 @@ header {
 }
 
 .control__pause,
-.last-track__pause {
+.player__pause {
   background-image: url("../img/play-button.svg");
 }
 
-.last-track__play {
+.player__play {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -246,7 +246,7 @@ header {
 }
 
 .control__timeline,
-.last-track__input {
+.player__timeline {
   -webkit-appearance: none;
      -moz-appearance: none;
   appearance: none;
@@ -264,19 +264,19 @@ header {
   cursor: pointer;
 }
 
-.last-track__input {
+.player__timeline {
   width: 317px;
 }
 
 .control__timeline[type="range"]::-webkit-slider-runnable-track,
-.last-track__input[type="range"]::-webkit-slider-runnable-track {
+.player__timeline[type="range"]::-webkit-slider-runnable-track {
   width: 887px;
   height: 3px;
   cursor: pointer;
 }
 
 .control__timeline::-webkit-slider-thumb,
-.last-track__input::-webkit-slider-thumb {
+.player__timeline::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   -webkit-box-sizing: content-box;
@@ -290,7 +290,7 @@ header {
 }
 
 .control__timeline::-moz-range-thumb,
-.last-track__input::-moz-range-thumb {
+.player__timeline::-moz-range-thumb {
   -moz-appearance: none;
   appearance: none;
   box-sizing: content-box;
@@ -303,7 +303,7 @@ header {
  }
 
 .control__timeline::-webkit-slider-runnable-track,
-.last-track__input::-webkit-slider-runnable-track {
+.player__timeline::-webkit-slider-runnable-track {
   width: 100%;
   height: 3px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -311,7 +311,7 @@ header {
 }
 
 .control__timeline::-moz-range-track,
-.last-track__input::-moz-range-track {
+.player__timeline::-moz-range-track {
   -moz-appearance: none;
   appearance: none;
   background: transparent;
@@ -320,7 +320,7 @@ header {
 }
 
 .control__timeline::-ms-track,
-.last-track__input::-ms-track {
+.player__timeline::-ms-track {
   appearance: none;
   background: transparent;
   border: none;
@@ -330,9 +330,9 @@ header {
 .control__current-time,
 .control__dash,
 .control__duration-time,
-.last-track__current,
-.last-track__dash,
-.last-track__duration {
+.player__current,
+.player__dash,
+.player__duration {
   display: inline-block;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -590,7 +590,7 @@ header {
           justify-content: space-between;
 }
 
-.last-track__title {
+.player__title {
   margin-bottom: 62px;
   padding-left: 94px;
   font-weight: 700;
@@ -601,7 +601,7 @@ header {
   background-position: left;
 }
 
-.last-track__playlist {
+.player__container {
   padding-left: 60px;
 }
 
