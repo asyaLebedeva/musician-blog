@@ -28,7 +28,7 @@ body {
   margin: 0 auto;
   max-width: 1920px;
   font-family: "Poppins", sans-serif;
-  background-image: url("../img/musician-back.png");
+  background-image: url("../img/musician-back.webp");
   background-repeat: no-repeat;
   background-position: top center;
   background-color: var(--dark);
@@ -377,15 +377,15 @@ header {
 }
 
 .news__item:first-child {
-  background-image: url("../img/first.png");
+  background-image: url("../img/first.webp");
 }
 
 .news__item:nth-child(2) {
-  background-image: url("../img/second.png");
+  background-image: url("../img/second.webp");
 }
 
 .news__item:last-child {
-  background-image: url("../img/third.png");
+  background-image: url("../img/third.webp");
 }
 
 .news__box {
@@ -431,7 +431,7 @@ header {
   right: 95px;
   width: 350px;
   height: 400px;
-  background-image: url("../img/front-news.png");
+  background-image: url("../img/front-news.webp");
   background-repeat: no-repeat;
   border-radius: 30px 0px;
   z-index: 10;
@@ -530,7 +530,7 @@ header {
   right: 80px;
   width: 370px;
   height: 483px;
-  background-image: url("../img/media-img.png");
+  background-image: url("../img/media-img.webp");
   background-repeat: no-repeat;
   border-radius: 30px 0px;
   z-index: 70;
@@ -820,7 +820,7 @@ ol {
   width: 540px;
   height: 235px;
   text-align: center;
-  background-image: url("../img/tour-five.png");
+  background-image: url("../img/tour-five.webp");
   background-repeat: no-repeat;
   border-radius: 30px 0px;
   -webkit-transition: color .3s ease-in-out;

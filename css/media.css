@@ -371,7 +371,7 @@
   body {
     margin: 0 auto;
     max-width: 480px;
-    background-image: url("../img/media/musician-back-mobile.png");
+    background-image: url("../img/media/musician-back-mobile.webp");
   }
 
   .header__logo {
