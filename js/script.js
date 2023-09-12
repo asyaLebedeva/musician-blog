@@ -58,6 +58,7 @@ function playSong() {
 // timeline
 import { calculateTime, changeTimelinePosition, changeSeek, displayBufferedAmount, whilePlaying } from "./main.js";
 
+
 const durationCont = playerControls.querySelector(".player__duration");
 const currentCont = playerControls.querySelector(".player__current");
 
