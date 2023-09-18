@@ -221,6 +221,10 @@
   .nav__item { 
     margin-bottom: 15px;
   }
+
+  .last-track__pic {
+    display: none;
+  }
 }
 
 @media (max-width: 845px) {
@@ -285,10 +289,6 @@
 @media (max-width: 720px) {
   .player__container {
     padding-left: 0;
-  }
-
-  .last-track__pic {
-    display: none;
   }
 }
 
