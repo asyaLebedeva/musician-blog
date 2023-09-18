@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/media.min.css">
     <title>Bright Lights</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.svg">
   </head>
@@ -16,7 +16,7 @@
     <header class="header">
         <picture class="header__logo">
           <source srcset="img/logo-group.svg">
-          <img class="logo__img" src="img/logo-group.svg" alt="bright-logo">
+          <img class="logo__img" width="223" height="60" src="img/logo-group.svg" alt="bright-logo">
         </picture>
         <nav class="nav">
           <ul class="nav__list">
@@ -41,7 +41,7 @@
               </audio>
                 <div class="control">
                   <div class="control__play control__pause control__play-pause"></div>
-                  <input type="range" class="control__timeline" max="100" value="0">
+                  <label for="controller"><input id="controller" type="range" class="control__timeline" max="100" value="0" aria-label="player's timeline"></label>
                   <span class="control__current-time time">0:00</span>
                   <span class="control__dash">-</span>
                   <span class="control__duration-time time">0:00</span>
@@ -107,8 +107,10 @@
       <section id="section-playlist" class="last-track">
         <div class="container">
           <picture class="last-track__pic">
-            <source srcset="img/play-list-label.png">
-            <img class="last-track__img" src="img/play-list-label.png" alt="bright-lights-photo">
+            <source srcset="img/play-list-label.png" media="(max-width: 1280px)">
+            <source srcset="img/media/375-play-list-label.png" media="(max-width: 1075px)">
+            <source srcset="img/media/202-play-list-label.png" media="(max-width: 900px)">
+            <img class="last-track__img" style="max-width: 510px; max-height: 510px;" src="img/play-list-label.png" alt="bright-lights-photo">
           </picture>
           <div class="player__container">
             <h2 class="player__title">Last tracks</h2>
@@ -116,7 +118,7 @@
               <div class="player__header">
                 <div class="player__control">
                   <div class="player__play player__pause player__play-pause play"></div>
-                  <input type="range" class="player__timeline" max="100" value="0">
+                  <label for="player__controller"><input id="player__controller" type="range" class="player__timeline" max="100" value="0" aria-label="player's timeline"></label>
                   <span class="player__current timer">0:00</span>
                   <span class="player__dash">-</span>
                   <span class="player__duration timer">0:00</span>
@@ -180,10 +182,10 @@
       <section id="tours" class="section-gallery">
         <div class="container">
           <ul class="section-gallery__list">
-            <li class="section-gallery__item section-gallery__item_one"><img class="section-gallery__img" src="img/tour-one.webp" alt="photo"></li>
-            <li class="section-gallery__item section-gallery__item_two"><img class="section-gallery__img" src="img/tour-two.webp" alt="photo"></li>
-            <li class="section-gallery__item section-gallery__item_three"><img class="section-gallery__img" src="img/tour-three.webp" alt="photo"></li>
-            <li class="section-gallery__item section-gallery__item_four"><img class="section-gallery__img" src="img/tour-four.webp" alt="photo"></li>
+            <li class="section-gallery__item section-gallery__item_one"><img class="section-gallery__img" src="img/tour-one.webp" width="255" height="500" alt="photo"></li>
+            <li class="section-gallery__item section-gallery__item_two"><img class="section-gallery__img" src="img/tour-two.webp" width="255" height="235" alt="photo"></li>
+            <li class="section-gallery__item section-gallery__item_three"><img class="section-gallery__img" src="img/tour-three.webp" width="255" height="235" alt="photo"></li>
+            <li class="section-gallery__item section-gallery__item_four"><img class="section-gallery__img" src="img/tour-four.webp" width="255" height="500" alt="photo"></li>
             <li class="section-gallery__item section-gallery__item_five"><h2><a class="section-gallery__link" href="#" target="_blank">EDC Las Vegas Mainstage</a></h2></li>
           </ul>
         </div>
@@ -194,10 +196,10 @@
           <div class="slider__item active">
             <div class="slider__card">
               <div class="slider__pic">
-                <img class="slider__img" src="img/tour-pic-own.webp" alt="chandler-az">
+                <img class="slider__img" width="350" height="280" src="img/tour-pic-own.webp" alt="chandler-az">
               </div>
               <div class="slider__content">
-                <h4 class="slider__title">Chandler, AZ</h4>
+                <h3 class="slider__title">Chandler, AZ</h3>
                 <p class="slider__sub">The Park at Wild Horse Pass</p>
                 <time datetime="2021-04-02" class="slider__time">Apr 02 2021</time>
                 <a class="slider__link" href="#" target="_blank">Tickets</a>
@@ -208,7 +210,7 @@
           <div class="slider__item">
             <div class="slider__card">
               <div class="slider__pic">
-                <img class="slider__img" src="img/tour-pic-three.webp" alt="el-swing-ibz">
+                <img class="slider__img" width="350" height="280" src="img/tour-pic-three.webp" alt="el-swing-ibz">
               </div>
               <div class="slider__content">
                 <h4 class="slider__title">Ibiza, IBZ</h4>
@@ -222,7 +224,7 @@
           <div class="slider__item">
             <div class="slider__card">
               <div class="slider__pic">
-                <img class="slider__img" src="img/tour-pic-two.webp" alt="ibiza-ibz">
+                <img class="slider__img" width="350" height="280" src="img/tour-pic-two.webp" alt="ibiza-ibz">
               </div>
               <div class="slider__content">
                 <h4 class="slider__title">Ibiza, IBZ</h4>
@@ -236,7 +238,7 @@
           <div class="slider__item">
             <div class="slider__card">
               <div class="slider__pic">
-                <img class="slider__img" src="img/tour-pic-own.webp" alt="chandler-az">
+                <img class="slider__img" width="350" height="280" src="img/tour-pic-own.webp" alt="chandler-az">
               </div>
               <div class="slider__content">
                 <h4 class="slider__title">Chandler, AZ</h4>
@@ -250,7 +252,7 @@
           <div class="slider__item">
             <div class="slider__card">
               <div class="slider__pic">
-                <img class="slider__img" src="img/tour-pic-three.webp" alt="el-swing-ibz">
+                <img class="slider__img" width="350" height="280" src="img/tour-pic-three.webp" alt="el-swing-ibz">
               </div>
               <div class="slider__content">
                 <h4 class="slider__title">Ibiza, IBZ</h4>
@@ -264,7 +266,7 @@
           <div class="slider__item">
             <div class="slider__card">
               <div class="slider__pic">
-                  <img class="slider__img" src="img/tour-pic-two.webp" alt="ibiza-ibz">
+                  <img class="slider__img" width="350" height="280" src="img/tour-pic-two.webp" alt="ibiza-ibz">
                 </div>
                 <div class="slider__content">
                   <h4 class="slider__title">Ibiza, IBZ</h4>
@@ -282,7 +284,7 @@
       <div class="footer">
         <picture class="footer__logo">
           <source srcset="img/logo-group.svg">
-          <img class="footer__img" src="img/logo-group.svg" alt="bright-logo">
+          <img class="footer__img" width="223" height="60" src="img/logo-group.svg" alt="bright-logo">
         </picture>
         <div class="footer-table">
           <table class="footer-table__contacts">
@@ -298,12 +300,12 @@
           </table>
         </div>
         <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="https://music.apple.com" target="_blank"></a></li>
-          <li class="footer__item"><a class="footer__link" href="https://open.spotify.com" target="_blank"></a></li>
-          <li class="footer__item"><a class="footer__link" href="https://www.instagram.com" target="_blank"></a></li>
-          <li class="footer__item"><a class="footer__link" href="https://www.youtube.com" target="_blank"></a></li>
-          <li class="footer__item"><a class="footer__link" href="https://twitter.com" target="_blank"></a></li>
-          <li class="footer__item"><a class="footer__link" href="https://www.facebook.com" target="_blank"></a></li>
+          <li class="footer__item"><a class="footer__link" aria-label="Open on Apple Music" href="https://music.apple.com" target="_blank"></a></li>
+          <li class="footer__item"><a class="footer__link" aria-label="Open on Spotify" href="https://open.spotify.com" target="_blank"></a></li>
+          <li class="footer__item"><a class="footer__link" aria-label="Open on Instagram" href="https://www.instagram.com" target="_blank"></a></li>
+          <li class="footer__item"><a class="footer__link" aria-label="Open on Youtube" href="https://www.youtube.com" target="_blank"></a></li>
+          <li class="footer__item"><a class="footer__link" aria-label="Open Twitter" href="https://twitter.com" target="_blank"></a></li>
+          <li class="footer__item"><a class="footer__link" aria-label="Open Facebook" href="https://www.facebook.com" target="_blank"></a></li>
         </ul>
    
         <!-- for media-->
@@ -323,7 +325,7 @@
     </footer>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/script.js" type="module"></script>
     <script src="js/main.js" type="module"></script>
   </body>
