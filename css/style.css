@@ -103,7 +103,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   padding-top: 42px;
-  margin-bottom: 322px;
+  margin-bottom: 161px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   max-width: 100%;
@@ -154,7 +154,7 @@ header {
 .main {
   margin: 0 auto;
   max-width: 1270px;
-  padding: 0 50px 0 50px;
+  padding: 161px 50px 0 50px;
 }
 
 /* intro */
@@ -211,7 +211,7 @@ header {
       -ms-flex-align: center;
   align-items: center;
   margin-top: 10px;
-  max-width: 100%;
+  width: 100%;
 }
 
 .control__play,
@@ -601,8 +601,13 @@ header {
   background-position: left;
 }
 
+.picture__last-track {
+  width: 40%;
+}
+
 .player__container {
   padding-left: 60px;
+  width: 60%;
 }
 
 ol li {
