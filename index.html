@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="css/slick.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/media.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
     <title>Bright Lights</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.svg">
   </head>
@@ -182,10 +182,10 @@
       <section id="tours" class="section-gallery">
         <div class="container">
           <ul class="section-gallery__list">
-            <li class="section-gallery__item section-gallery__item_one"><img class="section-gallery__img" src="img/tour-one.webp" width="255" height="500" alt="photo"></li>
-            <li class="section-gallery__item section-gallery__item_two"><img class="section-gallery__img" src="img/tour-two.webp" width="255" height="235" alt="photo"></li>
-            <li class="section-gallery__item section-gallery__item_three"><img class="section-gallery__img" src="img/tour-three.webp" width="255" height="235" alt="photo"></li>
-            <li class="section-gallery__item section-gallery__item_four"><img class="section-gallery__img" src="img/tour-four.webp" width="255" height="500" alt="photo"></li>
+            <li class="section-gallery__item section-gallery__item_one"><img class="section-gallery__img" src="img/tour-one.webp" style="max-width: 255px; max-height: 500px;" alt="photo"></li>
+            <li class="section-gallery__item section-gallery__item_two"><img class="section-gallery__img" src="img/tour-two.webp" style="max-width: 255px; max-height: 235px;" width="255" height="235" alt="photo"></li>
+            <li class="section-gallery__item section-gallery__item_three"><img class="section-gallery__img" src="img/tour-three.webp" style="max-width: 255px; max-height: 235px;" width="255" height="235" alt="photo"></li>
+            <li class="section-gallery__item section-gallery__item_four"><img class="section-gallery__img" src="img/tour-four.webp" style="max-width: 255px; max-height: 500px;" alt="photo"></li>
             <li class="section-gallery__item section-gallery__item_five"><h2><a class="section-gallery__link" href="#" target="_blank">EDC Las Vegas Mainstage</a></h2></li>
           </ul>
         </div>
@@ -196,7 +196,12 @@
           <div class="slider__item active">
             <div class="slider__card">
               <div class="slider__pic">
-                <img class="slider__img" width="350" height="280" src="img/tour-pic-own.webp" alt="chandler-az">
+                <img class="slider__img" 
+                srcset="img/media/845-less-tour-pic-one.webp 248w,
+                img/media/600-less-tour-pic-one.webp 249w"
+                sizes="(max-width: 1024px) 248px,
+                (max-width: 600px) 249px" 
+                src="img/tour-pic-one.webp" alt="chandler-az">
               </div>
               <div class="slider__content">
                 <h3 class="slider__title">Chandler, AZ</h3>
@@ -210,7 +215,12 @@
           <div class="slider__item">
             <div class="slider__card">
               <div class="slider__pic">
-                <img class="slider__img" width="350" height="280" src="img/tour-pic-three.webp" alt="el-swing-ibz">
+                <img class="slider__img" 
+                srcset="img/media/845-less-tour-pic-three.webp 248w,
+                img/media/600-less-tour-pic-three.webp 249w"
+                sizes="(max-width: 845px) 248px,
+                (max-width: 600px) 249px"
+                src="img/tour-pic-three.webp" alt="el-swing-ibz">
               </div>
               <div class="slider__content">
                 <h4 class="slider__title">Ibiza, IBZ</h4>
@@ -224,7 +234,12 @@
           <div class="slider__item">
             <div class="slider__card">
               <div class="slider__pic">
-                <img class="slider__img" width="350" height="280" src="img/tour-pic-two.webp" alt="ibiza-ibz">
+                <img class="slider__img" 
+                srcset="img/media/845-less-tour-pic-two.webp 248w,
+                img/media/600-less-tour-pic-two.webp 249w"
+                sizes="(max-width: 845px) 248px,
+                (max-width: 600px) 249px"
+                src="img/tour-pic-two.webp" alt="ibiza-ibz">
               </div>
               <div class="slider__content">
                 <h4 class="slider__title">Ibiza, IBZ</h4>
@@ -238,7 +253,12 @@
           <div class="slider__item">
             <div class="slider__card">
               <div class="slider__pic">
-                <img class="slider__img" width="350" height="280" src="img/tour-pic-own.webp" alt="chandler-az">
+                <img class="slider__img" 
+                srcset="img/media/845-less-tour-pic-one.webp 248w,
+                img/media/600-less-tour-pic-one.webp 249w"
+                sizes="(max-width: 845px) 248px,
+                (max-width: 600px) 249px"
+                src="img/tour-pic-one.webp" alt="chandler-az">
               </div>
               <div class="slider__content">
                 <h4 class="slider__title">Chandler, AZ</h4>
@@ -252,7 +272,12 @@
           <div class="slider__item">
             <div class="slider__card">
               <div class="slider__pic">
-                <img class="slider__img" width="350" height="280" src="img/tour-pic-three.webp" alt="el-swing-ibz">
+                <img class="slider__img" 
+                srcset="img/media/845-less-tour-pic-three.webp 248w,
+                img/media/600-less-tour-pic-three.webp 249w"
+                sizes="(max-width: 845px) 248px,
+                (max-width: 600px) 249px"
+                src="img/tour-pic-three.webp" alt="el-swing-ibz">
               </div>
               <div class="slider__content">
                 <h4 class="slider__title">Ibiza, IBZ</h4>
@@ -266,7 +291,12 @@
           <div class="slider__item">
             <div class="slider__card">
               <div class="slider__pic">
-                  <img class="slider__img" width="350" height="280" src="img/tour-pic-two.webp" alt="ibiza-ibz">
+                  <img class="slider__img" 
+                  srcset="img/media/845-less-tour-pic-two.webp 248w,
+                img/media/600-less-tour-pic-two.webp 249w"
+                sizes="(max-width: 845px) 248px,
+                (max-width: 600px) 249px"
+                src="img/tour-pic-two.webp" alt="ibiza-ibz">
                 </div>
                 <div class="slider__content">
                   <h4 class="slider__title">Ibiza, IBZ</h4>
@@ -323,8 +353,8 @@
         <p class="footer__copyright">&#169; 2020 DJ bright lights.</p>
       </div>
     </footer>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/script.js" type="module"></script>
     <script src="js/main.js" type="module"></script>
