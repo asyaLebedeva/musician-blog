@@ -103,7 +103,7 @@ $(".slider__carousel").slick({
   slidesToScroll: 1,
   responsive: [
     {
-      breakpoint: 770,
+      breakpoint: 920,
       settings: {
         slidesToShow: 2
       }
@@ -115,4 +115,4 @@ $(".slider__carousel").slick({
       }
     }
   ]
-});  
+});
