@@ -127,6 +127,11 @@
     border-bottom: 1px solid #2F2B2B;
   }
 
+  .slider__img {
+    width: 248px;
+    height: 198px;
+  }
+
   .slider__sub {
     margin-bottom: 10px;
     font-weight: 400;
@@ -328,6 +333,11 @@
 
   .slick-prev {
     left: 25px;
+  }
+
+  .slider__img {
+    width: 249px;
+    height: 199px;
   }
 
   .footer__list {
